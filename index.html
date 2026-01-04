@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RabbitCode | Desarrollo de Software de Élite</title>
+    <link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#2563eb">
+<link rel="apple-touch-icon" href="icons/icon-192x192.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { brand: '#2563eb', dark: '#020617' },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        
+        /* Evita el scroll horizontal y el espacio extra al final */
+        html, body { 
+            background-color: #020617; 
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden; 
+        }
+
+        .bg-animate {
+            background: radial-gradient(circle at 50% 50%, #1e293b 0%, #020617 100%);
+            position: relative;
+            min-height: 100vh;
+        }
+
+        .reveal-bold {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            animation: reveal-hero 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        }
+
+        @keyframes reveal-hero {
+            0% { transform: translateY(120%) skewY(10deg); opacity: 0; }
+            100% { transform: translateY(0) skewY(0); opacity: 1; }
+        }
+
+        .glow-cursor {
+            position: fixed; /* Cambiado a fixed para que no estire el body */
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(37,99,235,0.15) 0%, rgba(37,99,235,0) 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s, height 0.3s;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(37, 99, 235, 0.5);
+            transform: scale(1.02);
+        }
+
+        .btn-shine {
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-shine::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+            transform: rotate(45deg);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        
+        /* En el CSS, que no se vea por defecto */
+.glow-cursor { display: none; }
+
+/* Que solo aparezca en pantallas con mouse */
+@media (min-width: 1024px) {
+    .glow-cursor { display: block; }
+}
+    </style>
+</head>
+<body class="bg-animate text-white font-sans antialiased">
+
+    <div class="glow-cursor" id="glow"></div>
+
+    <nav class="fixed w-full z-50 px-6 py-8 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-black tracking-tighter text-white uppercase italic hover:scale-110 transition-transform cursor-pointer">
+                Rabbit<span class="text-brand">Code</span>
+            </h1>
+            <a href="https://www.facebook.com/profile.php?id=61586173523408" target="_blank" class="group flex items-center gap-2 text-xs tracking-widest uppercase opacity-70 hover:opacity-100 transition">
+                <span class="w-8 h-[1px] bg-brand group-hover:w-12 transition-all"></span>
+                FB / RabbitCode
+            </a>
+        </div>
+    </nav>
+
+    <main class="relative min-h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden">
+        <div class="absolute w-[600px] h-[600px] bg-brand/30 blur-[150px] rounded-full -z-10 animate-pulse scale-125"></div>
+
+        <div class="mb-6">
+            <span class="reveal-bold block text-brand font-black tracking-[0.6em] uppercase text-xs">
+                Software Engineering Excellence
+            </span>
+        </div>
+
+        <div class="mb-10">
+<h2 class="reveal-bold text-5xl md:text-[10rem] font-black tracking-tighter leading-[0.9] md:leading-none italic uppercase">
+                CREAMOS <br> 
+                <span class="text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500 drop-shadow-2xl">EL FUTURO.</span>
+            </h2>
+        </div>
+
+        <div class="mb-16">
+            <p class="reveal-bold max-w-3xl mx-auto text-gray-300 text-xl md:text-3xl font-light leading-relaxed opacity-80">
+                Arquitecturas web de <span class="text-white font-bold">alto rendimiento</span>. Donde la velocidad y el diseño de élite convergen.
+            </p>
+        </div>
+
+        <div class="reveal-bold">
+            <a href="https://m.me/oscarmvcode" target="_blank" 
+               class="btn-shine bg-brand text-white px-16 py-6 rounded-full font-black text-xl uppercase tracking-[0.2em] hover:scale-110 active:scale-95 transition-all inline-flex items-center gap-4 shadow-[0_0_40px_rgba(37,99,235,0.4)]">
+                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.91 1.455 5.503 3.733 7.195.194.143.313.37.313.616l-.004 2.144c0 .354.382.576.69.4l2.39-1.345c.19-.107.417-.133.626-.073A11.77 11.77 0 0012 20.516c5.523 0 10-4.145 10-9.258S17.523 2 12 2zm.894 12.33l-2.28-2.433-4.444 2.433 4.888-5.188 2.333 2.433 4.39-2.433-4.887 5.188z"/></svg>
+                Hablemos ahora
+            </a>
+        </div>
+    </main>
+
+    <section id="proyectos" class="py-20 md:py-40 max-w-7xl mx-auto px-6">
+        <div class="mb-24 scroll-reveal-left">
+            <h3 class="text-brand font-black tracking-[0.4em] uppercase text-sm mb-4">Portfolio</h3>
+<h4 class="text-4xl md:text-8xl font-black italic tracking-tighter uppercase leading-none">
+                Proyectos <br> <span class="opacity-30">Recientes</span>
+            </h4>
+        </div>
+        <div id="grid-proyectos" class="grid grid-cols-1 md:grid-cols-2 gap-12"></div>
+    </section>
+
+    <footer class="relative w-full p-8 md:p-12 flex flex-col md:flex-row justify-between items-center gap-10 border-t border-white/5 bg-black/40 backdrop-blur-xl z-10">
+        <div class="text-xs text-gray-500 uppercase tracking-[0.3em] font-bold text-center md:text-left">
+            &copy; 2026 RabbitCode <br> <span class="text-white">Guayaquil - Ecuador</span>
+        </div>
+        
+        <div class="flex gap-10 items-center">
+            <a href="https://github.com/oscarmvcode" target="_blank" class="hover:text-brand transition-all font-bold tracking-widest text-xs uppercase border-b border-brand/0 hover:border-brand">GitHub</a>
+            <div class="flex gap-3">
+                <div class="w-2 h-2 bg-brand rounded-full animate-ping"></div>
+                <div class="w-2 h-2 bg-gray-700 rounded-full"></div>
+                <div class="w-2 h-2 bg-gray-700 rounded-full"></div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 1. Registro de PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(reg => console.log('RabbitCode: Arquitectura PWA Activa'))
+                    .catch(err => console.log('Error de registro:', err));
+            });
+        }
+
+        // 2. Lógica del Resplandor (Solo para PC)
+        const glow = document.getElementById('glow');
+        if (window.matchMedia("(pointer: fine)").matches) {
+            window.addEventListener('mousemove', (e) => {
+                glow.style.left = e.clientX + 'px';
+                glow.style.top = e.clientY + 'px';
+            });
+        }
+
+        // 3. Animaciones
+        ScrollReveal().reveal('.scroll-reveal-left', {
+            origin: 'left',
+            distance: '50px',
+            duration: 1200,
+            delay: 200,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)',
+            reset: true
+        });
+    </script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

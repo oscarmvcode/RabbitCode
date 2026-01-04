@@ -1,0 +1,50 @@
+/* Importar una fuente elegante */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap');
+
+:root {
+    --primary: #2563eb;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Efecto Glassmorphism para la navegación */
+.glass {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Animación de entrada para que la web no sea estática */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reveal {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Estilo para las imágenes de tus proyectos */
+.project-card img {
+    filter: grayscale(20%);
+    transition: all 0.5s ease;
+}
+
+.project-card:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.03);
+}
+
+/* Un sutil gradiente al fondo para que no sea blanco puro */
+.bg-soft-gradient {
+    background: radial-gradient(circle at top right, #f8fafc, #ffffff);
+}

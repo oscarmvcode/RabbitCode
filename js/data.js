@@ -4,7 +4,7 @@ const proyectos = [
         titulo: "GEOHUNTER",
         descripcion: "GEOHUNTER es un simulador de reconocimiento geográfico de alto rendimiento.",
         tech: " JavaScript -- HTML -- CSS -- Tailwind  ",
-        imagen: "../assets/99.png",
+        imagen: "assets/99.png",
         url:"https://oscarmvcode.github.io/GEOHUNTER/"
     },
     {

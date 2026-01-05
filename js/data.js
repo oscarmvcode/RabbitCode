@@ -5,13 +5,7 @@ const proyectos = [
         descripcion: "GEOHUNTER es un simulador de reconocimiento geográfico de alto rendimiento.",
         tech: " JavaScript -- HTML -- CSS -- Tailwind  ",
         imagen: "../assets/99.png",
-        url:"https://oscarmvcode.github.io/GEOHUNTER/",
-        titulo: "CSV-Cleaner-Pro ",
-        descripcion: "Arquitectura del Sistema El software implementa un diseño desacoplado basado en Patrones de Comportamiento y principios SOLID",
-        tech: " JavaScript -- HTML -- CSS ",
-        imagen: "assets/99.png",
-        url:"https://oscarmvcode.github.io/CSV-Cleaner-Pro/"
-
+        url:"https://oscarmvcode.github.io/GEOHUNTER/"
     },
     {
         titulo: "Bubble-Habits-Pro",
